@@ -14,7 +14,7 @@ const Billboard: FC<BillboardProps> = ({ data }) => {
         }}
       >
         <div className="h-full w-full flex flex-col justify-center items-start text-center gap-y-8">
-          <div className="text-white font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
+          <div className="text-white sm:ml-3 font-bold text-3xl sm:text-5xl lg:text-6xl sm:max-w-xl max-w-xs">
             {data?.label}
           </div>
         </div>
