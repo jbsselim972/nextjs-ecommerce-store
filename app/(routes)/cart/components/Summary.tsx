@@ -7,6 +7,7 @@ import { toast } from "react-hot-toast";
 import Currency from "@/components/ui/Currency";
 import Button from "@/components/ui/Button";
 import useCart from "@/hooks/use-cart";
+import { API_URL } from "@/lib/constants";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -21,7 +22,6 @@ const Summary = () => {
     if (searchParams.get("success")) {
       toast.success("Payment completed.");
       removeAll();
-      console.log("here");
     }
     if (searchParams.get("canceled")) {
       toast.error("Something went wrong.");
@@ -29,12 +29,9 @@ const Summary = () => {
   }, [searchParams, removeAll]);
 
   const onCheckout = async () => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_URL}/checkout`,
-      {
-        productIds: items.map((item) => item.id),
-      }
-    );
+    const response = await axios.post(`${API_URL}/checkout`, {
+      productIds: items.map((item) => item.id),
+    });
 
     window.location = response.data.url;
   };

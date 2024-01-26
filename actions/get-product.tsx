@@ -1,4 +1,6 @@
-const ProductsUrl = `${process.env.NEXT_PUBLIC_API_URL}/products`;
+import { API_URL } from "@/lib/constants";
+
+const ProductsUrl = `${API_URL}/products`;
 
 const getProduct = async (id: string): Promise<Product> => {
   const res = await fetch(`${ProductsUrl}/${id}`);

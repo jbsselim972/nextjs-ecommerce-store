@@ -1,4 +1,6 @@
-const SizesURL = `${process.env.NEXT_PUBLIC_API_URL}/sizes`;
+import { API_URL } from "@/lib/constants";
+
+const SizesURL = `${API_URL}/sizes`;
 
 const getSizes = async (): Promise<Size[]> => {
   const res = await fetch(SizesURL);

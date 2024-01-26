@@ -1,4 +1,6 @@
-const CategoriesURL = `${process.env.NEXT_PUBLIC_API_URL}/categories`;
+import { API_URL } from "@/lib/constants";
+
+const CategoriesURL = `${API_URL}/categories`;
 
 const getCategories = async (): Promise<Category[]> => {
   const res = await fetch(CategoriesURL);

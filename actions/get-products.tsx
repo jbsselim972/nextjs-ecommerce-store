@@ -1,3 +1,4 @@
+import { API_URL } from "@/lib/constants";
 import qs from "query-string";
 
 interface Query {
@@ -7,7 +8,7 @@ interface Query {
   isFeatured?: boolean;
 }
 
-const ProductsURL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
+const ProductsURL = `${API_URL}/products`;
 
 const getProducts = async (query: Query): Promise<Product[]> => {
   const url = qs.stringifyUrl({

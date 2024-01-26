@@ -1,4 +1,6 @@
-const ColorsURL = `${process.env.NEXT_PUBLIC_API_URL}/colors`;
+import { API_URL } from "@/lib/constants";
+
+const ColorsURL = `${API_URL}/colors`;
 
 const getColors = async (): Promise<Color[]> => {
   const res = await fetch(ColorsURL);
