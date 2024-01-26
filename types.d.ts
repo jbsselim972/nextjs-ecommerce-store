@@ -2,6 +2,7 @@ interface Billboard {
   id: string;
   label: string;
   imageUrl: string;
+  isMain: boolean;
 }
 
 interface Category {
