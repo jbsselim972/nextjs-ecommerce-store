@@ -32,9 +32,9 @@ const CategoryPage: FC<CategoryPageProps> = async ({
     sizeId,
   });
 
-  const sizes = await getSizes();
-  const colors = await getColors();
   const category = await getCategory(categoryId);
+  const sizes = await getSizes(category.name);
+  const colors = await getColors(category.name);
   return (
     <div className="bg-white">
       <Container>
