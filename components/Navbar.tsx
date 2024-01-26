@@ -5,8 +5,6 @@ import Container from "@/components/ui/Container";
 import MainNav from "@/components/MainNav";
 import NavbarActions from "@/components/NavbarActions";
 
-export const revalidate = 0;
-
 const Navbar = async () => {
   const categories = await getCategories();
   return (
