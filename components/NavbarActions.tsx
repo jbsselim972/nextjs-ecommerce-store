@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import CustomButton from "@/components/ui/CustomButton";
 import useCart from "@/hooks/use-cart";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const NavbarActions = () => {
   const [isMounted, setIsMounted] = useState(false);
