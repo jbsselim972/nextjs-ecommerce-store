@@ -5,7 +5,6 @@ import getColors from "@/actions/get-colors";
 import getProducts from "@/actions/get-products";
 import getSizes from "@/actions/get-sizes";
 import Container from "@/components/ui/Container";
-import Billboard from "@/components/Billboard";
 import Filter from "./components/Filter";
 import NoResults from "@/components/ui/NoResults";
 import ProductCard from "@/components/ui/ProductCard";
@@ -35,6 +34,7 @@ const CategoryPage: FC<CategoryPageProps> = async ({
   const category = await getCategory(categoryId);
   const sizes = await getSizes(category.name);
   const colors = await getColors(category.name);
+
   return (
     <div className="bg-white">
       <Container>
