@@ -5,9 +5,9 @@ import { useSearchParams } from "next/navigation";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Currency from "@/components/ui/Currency";
-import Button from "@/components/ui/Button";
 import useCart from "@/hooks/use-cart";
 import { API_URL } from "@/lib/constants";
+import CustomButton from "@/components/ui/CustomButton";
 
 const Summary = () => {
   const searchParams = useSearchParams();
@@ -45,9 +45,9 @@ const Summary = () => {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button className="w-full mt-6" onClick={onCheckout}>
+      <CustomButton className="w-full mt-6" onClick={onCheckout}>
         Checkout
-      </Button>
+      </CustomButton>
     </div>
   );
 };
